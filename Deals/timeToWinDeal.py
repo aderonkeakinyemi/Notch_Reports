@@ -11,7 +11,6 @@ new_query = "SELECT * FROM notch_crm.deals where orgid = 16400 and creatorid = 1
 
 all_data = mySqlConnection.read_query(mySqlConnection.connection, new_query)
 win_lists = []
-print(len(all_data))
 if len(all_data) < 1:
     print('no data was returned for the query sent')
 else:

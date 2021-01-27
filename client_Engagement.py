@@ -5,8 +5,8 @@ from datetime import datetime, date, time
 a_query = "SELECT * FROM notch_crm.activity_log where orgid = 16400 and creatorid = 16364;"
 
 #for a in
-d_year =  2020
-t_query =  "SELECT * FROM notch_crm.activity_log where teamid = 16405 and creatorid = 16364"
+d_year = 2020
+t_query ="SELECT * FROM notch_crm.activity_log where teamid = 16405 and creatorid = 16364"
 a = mySqlConnection.read_query(mySqlConnection.connection, a_query)
 
 result = {}

@@ -11,17 +11,18 @@ import datetime
 #teamId = 16405
 #orgId = 16400
 #periodCount:
-# 'isExpired': False,
-# 'isSuspended': False,
+#'isExpired': False,
+#'isSuspended': False,
 #'isTerminated': False,
 #endDate
 #createdOn
 #print subs created by aderonke in 2021
 #ownerName: "Adex Adex"
 #clientID: 14 - living yield
+#{'orgId':16400, 'owner':16364, 'createdOn': {$gte: 1577833200000, $lte: 1609369200000}}
 
 # fetch all subscription reports for an org
-sub_list = getCollectionsByOrg.mongo_connection("mongodb://appuser:NotchCXPass%40word1@178.62.21.116:27017/notch_sales_clients_test?authSource=admin", "notch_sales_clients_test", "subscriptions", 16400)
+sub_list = getCollectionsByOrg.mongo_connection("notch_sales_clients_test", "subscriptions", 16400)
 org_txns = getTransactions.orgTxns
 sub_txn_count = 0
 
@@ -89,6 +90,5 @@ def subsription_amount(year, owner, client):
 
 a = count_subscription(this_year,this_owner,this_client)
 print(sub_txn_count)
-
-#print(a)
+print(a)
 

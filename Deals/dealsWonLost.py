@@ -5,7 +5,7 @@ import math
 getDealsquery = "SELECT * FROM notch_crm.deals where orgid = 16400;"
 
 org_deals = mySqlConnection.read_query(mySqlConnection.connection,getDealsquery)
-new_deals_query = mySqlConnection.read_query(mySqlConnection.connection,getDealsquery)
+get_all_deals = mySqlConnection.read_query(mySqlConnection.connection, getDealsquery)
 
 #SELECT * FROM notch_crm.deals where orgid = 16400
 #SELECT * FROM notch_crm.deals where orgid = 16400 and creatorid = 16364 and created_date like '2020%';
@@ -85,3 +85,5 @@ for each in dt.keys():
 #Connection is successful
 #{'01': {'Month': '01', 'total_deals': 11, 'total_won': 3, 'total_lost': 2}}
 #{'01': {'Month': '01', 'total_deals': 11, 'total_won': 3, 'total_lost': 2, 'percentage won': 27.27, 'percentage lost': 18.18}}
+
+print(dt)
